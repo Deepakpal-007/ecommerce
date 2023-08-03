@@ -12,11 +12,11 @@ export default function Category({handleChange}) {
         <div>
 
             
-            <Input handleChange={handleChange}  title='All' value='' name='category'/>
-            <Input handleChange={handleChange}   title='Nike' value='Nike' name='category'/>
-            <Input handleChange={handleChange}  title='Adida' value='Adidas' name='category'/>
-            <Input handleChange={handleChange}  title='Puma' value='Puma' name='category'/>
-            <Input handleChange={handleChange}  title='Vans' value='Vans' name='category'/>
+            <Input handleChange={handleChange}  title='All' value='' />
+            <Input handleChange={handleChange}   title='Nike' value='Nike' />
+            <Input handleChange={handleChange}  title='Adida' value='Adidas' />
+            <Input handleChange={handleChange}  title='Puma' value='Puma' />
+            <Input handleChange={handleChange}  title='Vans' value='Vans' />
             
         </div>
 

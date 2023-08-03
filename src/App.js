@@ -4,19 +4,36 @@ import products from './DB/data'
 import {useState} from 'react'
 import Card from './Components/Card';
 import Product from './Product/Product';
+import Home from './Home/Home';
+import Navigation from './Navigarion/Navigation';
 
 function App() {
 
   const [selectedCategory, setSelectedCategory] = useState(null)
+  const [query, setQuery] = useState('')
 
 
   const handleChange = event =>{
     setSelectedCategory(event.target.value)
   }
 
+
+  const handleInputChange = event =>{
+    setQuery(event.target.value)
+  }
+
+  const filteredItems = products.filter((product) => 
+  product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==-1
+  || product.color.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==-1
+  )
+
   const filteredData = (products,selectedCategory) =>{
 
     let filterdProducts = products
+
+    if(query){
+      filterdProducts = filteredItems
+    }
 
 
     if(selectedCategory){
@@ -54,8 +71,10 @@ function App() {
 
   return (
     <div className="App">
+      <Navigation handleInputChange={handleInputChange} handleChange={handleChange} />
       <SideBar handleChange={handleChange} />
       <Product result={result}/>
+      {/* <Home/> */}
     </div>
   );
 }

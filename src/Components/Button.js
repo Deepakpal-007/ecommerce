@@ -1,5 +1,5 @@
-export default function Button() {
+export default function Button({handleChange,title,value}) {
   return (
-    <button></button>
+    <button className='nav-link active' onClick={handleChange} value={value} >{title}</button>
   )
 }
