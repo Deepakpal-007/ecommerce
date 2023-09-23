@@ -1,11 +1,12 @@
 import './App.css';
-import SideBar from './SideBar/SideBar';
+import Hero from './Home/Hero/Hero'
 import products from './DB/data'
 import {useState} from 'react'
 import Card from './Components/Card';
-import Product from './Product/Product';
 import Home from './Home/Home';
 import Navigation from './Navigarion/Navigation';
+import { Routes, Route } from 'react-router-dom'
+import Banner from './Navigarion/Banner';
 
 function App() {
 
@@ -71,10 +72,17 @@ function App() {
 
   return (
     <div className="App">
+      <Banner/>
       <Navigation handleInputChange={handleInputChange} handleChange={handleChange} />
-      <SideBar handleChange={handleChange} />
-      <Product result={result}/>
-      {/* <Home/> */}
+      <Hero/>
+      {/* <Home handleChange={handleChange} result={result} /> */}
+      {/* <Routes>
+        <Route exact path='/product' component={<Navigation/>}/>
+        <Route exact path='/' component={ <Home handleChange={handleChange} result={result} />}/>
+        
+      </Routes>
+      */}
+      
     </div>
   );
 }

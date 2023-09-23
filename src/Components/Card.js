@@ -1,18 +1,21 @@
 import {BsFillBagHeartFill} from 'react-icons/bs'
 import 'bootstrap/dist/css/bootstrap.css'
+
+
+
 export default function Card({img,title,star,reviews,prevPrice,newPrice}) {
   return (
     <div>
        
          <div className="card" >
-            <img src={img} className="card-img-top card-img" alt={title} />
+            <img src={img} className="card-img" alt={title} style={{width:'6rem'}} />
             <div className="card-body">
                 <h5 className="card-title"  >{title}</h5>
-                <section className="card-review" style={{margin:'1rem'}} >
+                <section className="card-review"  >
                     {star} {star} {star} {star}
                     <span className="total-reviews">{reviews}</span>
                 </section>
-                <section className="card-price" style={{margin:'1rem'}} >
+                <section className="card-price"  >
                     <div className="price">
                         <del>{prevPrice}</del> {newPrice}
                     </div>

@@ -1,0 +1,60 @@
+.hero-section  {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8.5rem;
+    padding-left: 2rem;
+}
+
+.hero-heading{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: black;
+    margin: 0;
+}
+
+.hero-subheading{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px;
+    margin-left: 0;
+}
+
+.hero-button{
+    margin-top: 2rem;
+}
+
+.hero-button button{
+    width: 120px;
+    height: 40px;
+    margin: 0;
+    
+    border-radius: 50px;
+    color: white;
+    background: #000;
+    border: none;
+    
+}
+
+.hero-button button:hover{
+    width: 115px;
+    height: 40px;
+}
+
+.hero-stats{
+    padding-top: 2rem;
+    display: flex; 
+}
+
+.brands{margin-right: 25px; color: black;}
+.quality{margin-right: 25px; color: black; }
+.customers{margin-right: 25px; color: black; }
+
+.hero-image img {
+    
+    height: 600px;
+}
